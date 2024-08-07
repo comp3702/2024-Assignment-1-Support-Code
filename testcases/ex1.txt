@@ -1,0 +1,20 @@
+# n_rows, n_cols
+5, 6
+# target cost
+18.0
+# target time (ucs, a*)
+0.1, 0.1
+# target nodes expanded (ucs, a*)
+1759, 1500
+# hex grid data
+/XX\__/XX\__/TT\__
+\__/  \__/XX\__/XX\
+/DR\__/  \__/TT\__/
+\__/  \__/TT\__/TT\
+/  \__/  \__/  \__/
+\__/  \__/  \__/  \
+/aa\__/aa\__/  \__/
+\__/4D\__/  \__/  \
+/XX\__/XX\__/  \__/
+\__/aa\__/XX\__/XX\
+   \__/  \__/  \__/
