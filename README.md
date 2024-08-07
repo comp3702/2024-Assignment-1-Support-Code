@@ -94,11 +94,12 @@ This file is a template you should use to implement your solution.
 
 You should implement the `solve_ucs()` and `solve_a_star()` functions as well as any initialisation or helper functions
 you require.
-
 You can test your solution by running `tester.py`.
 
 
-**tester.py**
+Note that your heuristic function used in A* search must be implemented in the `compute_heuristic` method and called from your A* method, and any pre-processing-based heuristics should be implemented in `preprocess_heuristic` (optional). This enables consistent evaluation of your heuristic functions, independent of your A* implementation.
+
+**tester.py** (Coming soon...)
 
 Use this script to evaluate your solution. This script calls your implementations of `solve_ucs()` and `solve_a_star()` 
 in `solution.py`. Use command line arguments to select whether to evaluate UCS, A*, or both methods, and the numbers of
