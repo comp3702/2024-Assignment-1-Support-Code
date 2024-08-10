@@ -99,7 +99,7 @@ You can test your solution by running `tester.py`.
 
 Note that your heuristic function used in A* search must be implemented in the `compute_heuristic` method and called from your A* method, and any pre-processing-based heuristics should be implemented in `preprocess_heuristic` (optional). This enables consistent evaluation of your heuristic functions, independent of your A* implementation.
 
-**tester.py** (Coming soon...)
+**tester.py** 
 
 Use this script to evaluate your solution. This script calls your implementations of `solve_ucs()` and `solve_a_star()` 
 in `solution.py`. Use command line arguments to select whether to evaluate UCS, A*, or both methods, and the numbers of
@@ -107,11 +107,17 @@ the testcases you wish to evaluate on.
 
 Usage:
 ~~~~~
-$ python tester.pyc [search_type] [testcases] [-v (optional)]
+$ python tester.py [search_type] [testcases] [-v (optional)]
     search_type = 'ucs', 'a_star' or 'both'
     testcases = a comma separated list of numbers (e.g. '1,3,4')
     if -v is specified, the solver's trajectory will be visualised
 ~~~~~
+  
+Example use:   
+To test UCS on testcase 1 with no visualisation run:
+`python tester.py ucs 1` 
+
+Adding -v flag will run your solution in the ASCII version of the game.
 
 **testcases**
 
