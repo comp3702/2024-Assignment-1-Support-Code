@@ -206,6 +206,29 @@ class GUI:
     def quit(self, event):
         self.window.quit()
 
+    def render(self, action):
+        success, cost, new_state = self.game_env.perform_action(self.state, action)
+        
+        if success:
+            self.total_cost += cost
+            self.state = new_state
+            
+            if self.game_env.is_solved(self.state):
+                self.draw_hexagonal_grid()
+                self.draw_environment()
+                self.update_status_bar()
+                tk.messagebox.showinfo("Game Over",
+                                    f"Environment solved with a total cost of {round(self.total_cost, 1)}!")
+                self.window.quit()
+            else:
+                self.draw_hexagonal_grid()
+                self.draw_environment()
+                self.update_status_bar()
+        else:
+            tk.messagebox.showwarning("Warning", "Action resulted in collision. Please select a different action.")
+        
+        self.window.update()
+
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print("Usage: play.py [input_filename]")

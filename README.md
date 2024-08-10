@@ -119,6 +119,12 @@ To test UCS on testcase 1 with no visualisation run:
 
 Adding -v flag will run your solution in the ASCII version of the game.
 
+**tester_gui.py**
+
+The usage and functionality are identical to tester.py. When run with the -v flag, it launches the game GUI and animates the search solution.
+
+Example usage: `python tester_gui.py ucs 3 -v`
+
 **testcases**
 
 A directory containing input files which can be used to evaluate your solution.
