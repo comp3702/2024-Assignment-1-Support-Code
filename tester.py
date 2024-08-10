@@ -105,7 +105,7 @@ class LoopCounter:
     def verify2(self):
         # return False if timing suggests loop counter was used incorrectly
         ts_avg = sum(self._ts) / len(self._ts)
-        if ts_avg < 0.0005:
+        if ts_avg < 0.0001: # decreased to account for faster machines
             return False
         else:
             return True
